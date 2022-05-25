@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Statistics.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+    
+    <ScrollView>
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">
+
+            <Label 
+                Text="Анализатор"
+                Grid.Row="0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Добре дошли!"
+                Grid.Row="1"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label 
+                Text="Моля, въведете пътища до файлове, който искате да анализирате. Въведете поне един валиден път до лог файл и файл с оценки."
+                Grid.Row="2"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+
+            <Editor Grid.Row="3"
+                x:Name="LogsEditor"
+                Placeholder="Моля въведете път до файл с логове"
+                HeightRequest="{OnPlatform Android='50',iOS='50',Default='5'}" 
+                MaxLength="150"
+                WidthRequest="450"
+                Background="#2B0B98"
+                HorizontalOptions="Center" />
+
+            <Editor Grid.Row="4"
+                x:Name="ResultsEditor"
+                Placeholder="Моля въведете път до файл с оценки"
+                HeightRequest="{OnPlatform Android='50',iOS='50',Default='5'}" 
+                MaxLength="150"
+                WidthRequest="450"
+                Background="#2B0B98"
+                HorizontalOptions="Center" />
+           
+            <Editor Grid.Row="5"
+                x:Name="StudentResultsEditor"
+                Placeholder="Моля въведете път до файл с оценки"
+                HeightRequest="{OnPlatform Android='50',iOS='50',Default='5'}" 
+                MaxLength="150"
+                WidthRequest="450"
+                Background="#2B0B98"
+                HorizontalOptions="Center" />
+
+            <Button 
+                Text="Заредете файлове"
+                FontAttributes="Bold"
+                Grid.Row="6"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnFileButtonClicked"
+                HorizontalOptions="Center" />
+            <Label 
+                x:Name="InvalidPathLabel"
+                Text="Невалиден път към файл"
+                IsVisible="False"
+                Grid.Row="7"
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="Red" />
+        </Grid>
+    </ScrollView>
+</ContentPage>

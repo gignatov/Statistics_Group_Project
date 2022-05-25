@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Statistics.Menu"
+             Title=""
+             BackgroundColor="White">
+    <ScrollView>
+        <Grid RowDefinitions="Auto,Auto">
+            <Grid Grid.Row="0" ColumnDefinitions="*,*" RowDefinitions="Auto,Auto"
+              Padding="{OnPlatform iOS='30,60,30,30', Default='0'}">
+                <Grid Grid.Column="0" HeightRequest="360" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" >
+                <Button 
+                Text="Изчисляване на относителна честота"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="RelativeFrequencyButtonClicked"
+                HorizontalOptions="Center" />
+
+                <Button 
+                Text="Изчисляване на абсолютна честота"
+                FontAttributes="Bold"
+                Grid.Row="2"
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="AbsoluteFrequencyButtonClicked"
+                HorizontalOptions="Center" />
+
+                <Button 
+                Text="Определяне на мода"
+                FontAttributes="Bold"
+                Grid.Row="4"
+                Grid.RowSpan="1"
+                Margin="5"
+                Clicked="ModeButtonClicked"
+                HorizontalOptions="Center" />
+
+                <Button 
+                Text="Определяне на медиана"
+                FontAttributes="Bold"
+                Grid.Row="5"
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="MedianButtonClicked"
+                HorizontalOptions="Center" />
+
+                <Button 
+                Text="Изчисляване на средна стойност"
+                FontAttributes="Bold"
+                Grid.Row="7"
+                Margin="5"
+                Clicked="AverageButtonClicked"
+                HorizontalOptions="Center" />
+
+            </Grid>
+
+                <Grid Grid.Column="1" HeightRequest="360" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,*" >
+
+                    <Button 
+                Text="Определяне на дисперсия"
+                FontAttributes="Bold"
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="DispersionButtonClicked"
+                SemanticProperties.Hint="Counts the number of times you click"
+                HorizontalOptions="Center" />
+
+                    <Button 
+                Text="Изчисляване на стандартно отклонение"
+                FontAttributes="Bold"
+                Grid.Row="2"
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="StandardDeviationButtonClicked"       
+                SemanticProperties.Hint="Counts the number of times you click"
+                HorizontalOptions="Center" />
+
+                    <Button 
+                Text="Изчисляване на размах"
+                FontAttributes="Bold"
+                Grid.Row="4"
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="SwingButtonClicked"       
+                SemanticProperties.Hint="Counts the number of times you click"
+                HorizontalOptions="Center" />
+
+                    <Button 
+                Text="Намиране на линейна корелация"
+                FontAttributes="Bold"
+                Grid.Row="6" 
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="CorrelationButtonClicked"
+                HorizontalOptions="Center" />
+
+                    <Button 
+                Text="Обобщаване на данните"
+                FontAttributes="Bold"
+                Grid.Row="8"
+                Grid.RowSpan="2"
+                Margin="5"
+                Clicked="SummaryButtonClicked"
+                SemanticProperties.Hint="Counts the number of times you click"
+                HorizontalOptions="Center" />
+
+                </Grid>
+            </Grid>
+            <Label 
+                Text="Резултат"
+                Grid.Row="1"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="18"
+                HorizontalOptions="Center"/>
+            <Label Text=""
+                   x:Name="ResultLabel"
+                   Grid.Row="3"
+                   Margin="25"
+                   SemanticProperties.HeadingLevel="Level3"
+                   FontSize="18"
+                   IsVisible="False"
+                   HorizontalOptions="Center" />
+        </Grid>
+    </ScrollView>
+</ContentPage>
