@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExelReader", "ExelReader\ExelReader.csproj", "{56A25A6B-2EE9-441F-92C2-B85568610432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistractionTests", "DistractionTests\DistractionTests.csproj", "{48654612-5FDF-400E-A6BD-8A42C320D455}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56A25A6B-2EE9-441F-92C2-B85568610432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A25A6B-2EE9-441F-92C2-B85568610432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A25A6B-2EE9-441F-92C2-B85568610432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A25A6B-2EE9-441F-92C2-B85568610432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48654612-5FDF-400E-A6BD-8A42C320D455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48654612-5FDF-400E-A6BD-8A42C320D455}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48654612-5FDF-400E-A6BD-8A42C320D455}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48654612-5FDF-400E-A6BD-8A42C320D455}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79E1342B-DE9E-42DE-A143-DDA390E1B024}
+	EndGlobalSection
+EndGlobal
